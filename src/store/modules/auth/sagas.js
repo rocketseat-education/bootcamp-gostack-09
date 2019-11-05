@@ -46,7 +46,13 @@ export function* signUp({ payload }) {
 
     history.push('/');
   } catch (err) {
-    toast.error('Falha no cadastro, verifique seus dados!');
+    const { error } = err.response.data;
+
+    if (error) {
+      toast.error('Usuário já cadastrado');
+    } else {
+      toast.error('Falha no cadastro. Verifique seus dados');
+    }
 
     yield put(signFailure());
   }
