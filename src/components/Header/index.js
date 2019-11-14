@@ -28,7 +28,7 @@ export default function Header() {
             </div>
             <img
               src={
-                profile.avatar.url ||
+                (profile.avatar && profile.avatar.url) ||
                 'https://api.adorable.io/avatars/50/abott@adorable.png'
               }
               alt="Diego Fernandes"
