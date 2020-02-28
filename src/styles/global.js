@@ -23,6 +23,7 @@ export default createGlobalStyle`
 
   body {
     -webkit-font-smoothing: antialiased;
+    background: linear-gradient(-90deg, #7159c1, #ab59c1);
   }
 
   body, input, button {
